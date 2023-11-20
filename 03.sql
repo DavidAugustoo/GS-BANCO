@@ -92,11 +92,11 @@ BEGIN
 
     -- Inserção de dados em MEDICAL_RECORDS
     BEGIN
-        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (1, 'Medical history of Alice Smith');
-        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (2, 'Medical history of Bob Johnson');
-        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (3, 'Medical history of Carol White');
-        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (4, 'Medical history of David Brown');
-        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (5, 'Medical history of Eva Green');
+        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (1, 'Paciente feminina, 24 anos, diagnosticada com diabetes tipo 1. Apresenta histórico familiar da doença. Relata dificuldade no controle glicêmico, com episódios frequentes de hipoglicemia. Sinais de fadiga e perda de peso observados. Aconselhada a ajustar a dosagem de insulina e seguir rigoroso plano alimentar.');
+        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (2, 'Paciente masculino, 30 anos, com lesão no ligamento cruzado anterior do joelho direito. Ocorreu durante atividade esportiva. Exibe inchaço e limitação de movimento. Recomendado repouso, fisioterapia e avaliação para possível cirurgia.');
+        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (3, 'Paciente feminina, 65 anos, com diagnóstico de hipertensão arterial. Apresenta leituras consistentemente elevadas de pressão arterial. Histórico de tabagismo e dieta rica em sódio. Recomendado alterações na dieta, aumento da atividade física e início de terapia medicamentosa.');
+        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (4, 'Paciente masculino, 58 anos, recentemente diagnosticado com diabetes tipo 2. Sobrepeso e sedentário. Relata aumento da sede e frequência urinária. Exames indicam níveis elevados de glicose no sangue. Recomendado mudança no estilo de vida, incluindo dieta e exercício, além de medicação oral.');
+        INSERT INTO MEDICAL_RECORDS (patient_id, document_body) VALUES (5, 'Paciente feminina, 42 anos, sofre de enxaqueca crônica. Episódios frequentes de dor de cabeça intensa, acompanhada de fotofobia e náuseas. Tratamento atual com medicamentos preventivos não está sendo eficaz. Avaliação para ajuste de medicação e terapias alternativas em consideração.');
     EXCEPTION
         WHEN DUP_VAL_ON_INDEX THEN
             v_error_message := SQLERRM;

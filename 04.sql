@@ -10,11 +10,11 @@ CREATE OR REPLACE PROCEDURE check_health_condition(p_condition VARCHAR2) AS
     found BOOLEAN := FALSE;
 BEGIN
     OPEN c_patients;
-    LOOP
-        FETCH c_patients INTO v_patient_id;
-        EXIT WHEN c_patients%NOTFOUND;
+    FETCH c_patients INTO v_patient_id;
+    WHILE c_patients%FOUND LOOP
         found := TRUE;
         DBMS_OUTPUT.PUT_LINE('Paciente com ID ' || v_patient_id || ' tem a condição: ' || p_condition);
+        FETCH c_patients INTO v_patient_id;
     END LOOP;
     CLOSE c_patients;
 
@@ -24,7 +24,7 @@ BEGIN
 END;
 
 -- Verifica se tem algum paciente com relátorio de diabetes
-CALL check_health_condition('history')
+CALL check_health_condition('lkdasld')
 
 -- 2. Procedure para verificar a atualização de registros médicos
 

@@ -1,4 +1,4 @@
--- Tarefa 5
+-- Enunciado 5
 
 SET SERVEROUTPUT ON;
 
@@ -28,4 +28,4 @@ EXCEPTION
 END;
 
 
-CALL count_doctor_appointments_by_id(1, TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2023-12-31', 'YYYY-MM-DD'));
+CALL count_doctor_appointments_by_id(1, TO_DATE('2023-01-01', 'YYYY-MM-DD'), TO_DATE('2023-01-31', 'YYYY-MM-DD'));
